@@ -4,7 +4,7 @@ module Typedeploy
   class Config
     include Singleton
 
-    @url = "http://typekit.com/api/v1/"
+    @url = "https://typekit.com/api/v1/"
 
     class << self
       attr_accessor :directory, :api_token, :url
@@ -17,7 +17,8 @@ module Typedeploy
     def self.kits
       kits = {}
       kits.default = ""
-      kits.merge(YAML.load(File.read(kits_file)))
+      kits.merge!(YAML.load(File.read(kits_file))) if File.exist? kits_file
+      kits
     end
 
     def self.kits_file

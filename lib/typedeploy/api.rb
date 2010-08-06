@@ -50,7 +50,7 @@ module Typedeploy
 
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
-      http.enable_post_connection_check = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
       res = http.start { |http| http.request(req) }
 
       case res
