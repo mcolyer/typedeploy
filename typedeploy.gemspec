@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'typedeploy'
-  s.version           = '0.1.0'
+  s.version           = '0.1.1'
   s.date              = '2010-08-06'
   s.rubyforge_project = 'typedeploy'
 
@@ -26,9 +26,9 @@ Gem::Specification.new do |s|
   ## List the primary authors. If there are a bunch of authors, it's probably
   ## better to set the email to an email list or something. If you don't have
   ## a custom homepage, consider using your GitHub URL or the like.
-  s.authors  = ["John Doe"]
-  s.email    = 'jdoe@example.com'
-  s.homepage = 'http://example.com/typedeploy'
+  s.authors  = ["Matt Colyer"]
+  s.email    = 'matt at nospam colyer dot name'
+  s.homepage = 'http://github.com/mcolyer/typedeploy'
 
   ## This gets added to the $LOAD_PATH so that 'lib/typedeploy.rb' can be required as
   ## require 'typedeploy.rb' or'/lib/typedeploy/file.rb' can be as require 'typedeploy/file.rb'
