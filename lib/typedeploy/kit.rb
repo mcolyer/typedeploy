@@ -6,14 +6,15 @@ module Typedeploy
     def initialize(id, data)
       @kid = id
       @data = data
+      @api = Api.new
     end
 
     def publish
-      Api.publish(@kid)
+      @api.publish(@kid)
     end
 
     def create
-      Api.create(@data)
+      @api.create(self)
     end
 
     class Family
