@@ -20,7 +20,7 @@ describe Typedeploy::Api do
 
     Typedeploy::Api.should_receive(:request).with(:post, "https://typekit.com/api/v1/yaml/kits/", kit_params).and_return([true, {"kit" => {"id" => "123"}}.to_yaml])
     Typedeploy::Api.should_receive(:request).with(:post, "https://typekit.com/api/v1/yaml/kits/123/families/droid-serif", family_params).and_return([true, ""])
-    subject.create(kit).should be_true
+    subject.create(kit).should == "123"
   end
 end
 

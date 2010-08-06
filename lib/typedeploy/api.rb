@@ -29,6 +29,7 @@ module Typedeploy
             puts "Error adding #{family} to #{kit.kid}"
           end
         end
+        kit.kid
       else
         puts "Error creating #{kit}"
       end
