@@ -30,8 +30,20 @@ Manage and deploy your Typekit kits from the comfort of your own project.
 
 Then to use your example kit, do something like this
 
-    <script type="text/javascript" src="http://use.typekit.com/<%= Typedeploy::Config.kits['example'] %>.js"></script>
-    <script type="text/javascript">try{Typekit.load({});}catch(e){}</script>
+    require 'rubygems'
+    require 'sinatra'
+    require 'typedeploy'
+
+    Typedeploy::Config.directory = File.dirname(__FILE__)
+
+    get "/" do
+      erb <<-eos
+        <script type="text/javascript" src="http://use.typekit.com/<%= Typedeploy::Config.kits['example'] %>.js"></script>
+        <script type="text/javascript">try{Typekit.load({});}catch(e){}</script>
+        <h1 class="tk-droid-serif">Test</h1>
+        <h1>Control</h1>
+      eos
+    end
 
 Handling new versions
 ---------------------
