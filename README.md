@@ -12,9 +12,13 @@ Manage and deploy your Typekit kits from the comfort of your own project.
 
     vi Rakefile
     # Add
-    # import 'tasks/typedeploy'
-    # Typedeploy::Config.api_token = 'secrettypekittoken'
+    # require 'typedeploy'
+    # require 'typedeploy/rake/typedeploytask'
+    #
+    # Typedeploy::Config.api_token = 'secrettoken'
     # Typedeploy::Config.directory = File.dirname(__FILE__)
+    # Typedeploy::TypedeployTask.new
+
 
     rake typekit:init
 

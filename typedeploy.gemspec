@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'typedeploy'
-  s.version           = '0.0'
-  s.date              = '2010-01-01'
+  s.version           = '0.1.0'
+  s.date              = '2010-08-06'
   s.rubyforge_project = 'typedeploy'
 
   ## Make sure your summary is short. The description may be as long
@@ -34,31 +34,51 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   ## This sections is only necessary if you have C extensions.
-  s.require_paths << 'ext'
-  s.extensions = %w[ext/extconf.rb]
+  #s.require_paths << 'ext'
+  #s.extensions = %w[ext/extconf.rb]
 
   ## If your gem includes any executables, list them here.
-  s.executables = ["name"]
-  s.default_executable = 'name'
+  #s.executables = ["name"]
+  #s.default_executable = 'name'
 
   ## Specify any RDoc options here. You'll want to add your README and
   ## LICENSE files to the extra_rdoc_files list.
   s.rdoc_options = ["--charset=UTF-8"]
-  s.extra_rdoc_files = %w[README LICENSE]
+  s.extra_rdoc_files = %w[README.md LICENSE]
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
-  s.add_dependency('DEPtypedeploy', [">= 1.1.0", "< 2.0.0"])
+  #s.add_dependency('DEPtypedeploy', [">= 1.1.0", "< 2.0.0"])
 
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
-  s.add_development_dependency('DEVDEPtypedeploy', [">= 1.1.0", "< 2.0.0"])
+  #s.add_development_dependency('DEVDEPtypedeploy', [">= 1.1.0", "< 2.0.0"])
 
   ## Leave this section as-is. It will be automatically generated from the
   ## contents of your Git repository via the gemspec task. DO NOT REMOVE
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
-  s.files = %w[]
+  s.files = %w[
+    LICENSE
+    README.md
+    Rakefile
+    lib/typedeploy.rb
+    lib/typedeploy/api.rb
+    lib/typedeploy/api_url.rb
+    lib/typedeploy/config.rb
+    lib/typedeploy/kit.rb
+    lib/typedeploy/kit_loader.rb
+    lib/typedeploy/rake/typedeploytask.rb
+    spec/api_spec.rb
+    spec/api_url_spec.rb
+    spec/config_spec.rb
+    spec/example/kits.yml
+    spec/example/kits/example.yml
+    spec/kit_loader_spec.rb
+    spec/kit_spec.rb
+    spec/spec_helper.rb
+    typedeploy.gemspec
+  ]
   # = MANIFEST =
 
   ## Test files will be grabbed from the file list. Make sure the path glob
