@@ -1,0 +1,15 @@
+---
+kit:
+  name: "example"
+  badge: true
+  analytics: true
+  domains:
+  - localhost
+  families:
+  - id: droid-serif
+    subset: all
+    variations:
+    - n4
+    - i4
+    - n7
+    - i7
