@@ -62,3 +62,13 @@ Notes
 -----
 Be sure to check in your kits.yml and kits/*.yml files as they are now vital to
 the proper functioning of your project.
+
+Contributing
+------------
+
+1. Fork typedeploy
+1. Create a topic branch - `git checkout -b my_branch`
+1. Run tests - `rake test`
+1. Push to your branch - `git push origin my_branch`
+1. Create an [issue](http://github.com/mcolyer/typedeploy/issues) with a link to your branch
+1. That's it!
