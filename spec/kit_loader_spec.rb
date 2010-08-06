@@ -23,4 +23,13 @@ describe Typedeploy::KitLoader do
       "subset"=>"all"
     }
   end
+
+  context "no created kits" do
+    before(:all) do
+      Typedeploy::Config.directory = "/"
+    end
+    it "can still return .kits" do
+      Typedeploy::Config.kits.should == {}
+    end
+  end
 end
